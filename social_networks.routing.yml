@@ -1,0 +1,49 @@
+social_networks.settings:
+  path: '/admin/config/social_networks/settings'
+  defaults:
+    _form: '\Drupal\social_networks\Form\SocialSettingsForm'
+    _title: 'Social Settings'
+  requirements:
+    _permission: 'administer site configuration'
+social_networks.show_counts:
+  path: '/social_counts'
+  defaults:
+    _controller: '\Drupal\social_networks\Controller\SocialController::showSocialCounts'
+    _title: 'showSocialCounts'
+  requirements:
+    _permission: 'access content'
+social_networks.show_main_posts:
+  path: '/main_posts'
+  defaults:
+    _controller: '\Drupal\social_networks\Controller\SocialController::showMainPosts'
+    _title: 'showMainPosts'
+  requirements:
+    _permission: 'access content'
+social_networks.more_main_posts:
+  path: '/more_main_posts'
+  defaults:
+    _controller: '\Drupal\social_networks\Controller\SocialController::showMoreMainPosts'
+    _title: 'showMoreMainPosts'
+  requirements:
+    _permission: 'access content'
+social_networks.more_hashtag_posts:
+  path: '/search_posts'
+  defaults:
+    _controller: '\Drupal\social_networks\Controller\SocialController::showHashtagPosts'
+    _title: 'showHashtagPosts'
+  requirements:
+    _permission: 'access content'
+social_networks.more_social_posts:
+  path: '/social_posts/more'
+  defaults:
+    _controller: '\Drupal\social_networks\Controller\SocialController::showSocialPosts'
+    _title: 'showSocialPosts'
+  requirements:
+    _permission: 'access content'
+social_networks.get_token:
+  path: '/admin/config/social_networks/settings/token/{type}'
+  defaults:
+    _controller: '\Drupal\social_networks\Controller\SocialController::getToken'
+    _title: 'Get token'
+  requirements:
+    _permission: 'access content'

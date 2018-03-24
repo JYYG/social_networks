@@ -1,0 +1,7 @@
+get_token:
+  js:
+    js/get_token.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupalSettings

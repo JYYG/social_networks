@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Contains social_networks.module.
+ */
+
+function social_networks_form_alter(
+  &$form,
+  \Drupal\Core\Form\FormStateInterface $form_state,
+  $form_id
+) {
+  switch ($form_id) {
+
+    default:
+      $form['#attached']['library'][] = 'social_networks/get_token';
+      break;
+
+  }
+}

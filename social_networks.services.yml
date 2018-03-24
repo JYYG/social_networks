@@ -1,0 +1,4 @@
+services:
+  social_networks.social:
+    class: \Drupal\social_networks\SocialService
+    arguments: ['@entity.query']
